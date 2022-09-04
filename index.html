@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p-3 pt-2">
+        <div class="d-flex flex-sm-row flex-column align-items-center">
+            <div class="panel" id="panel">
+                <div id="panel-container" class="weather-card d-flex justify-content-center">
+                    <div id="panel-content" class="position-relative">
+                        <img src="./assets/images/bg.jpg" alt="" class="position-relative weather-img">
+                        <div class="card-content position-absolute">
+                            <h3 class="day">Friday</h3>
+                            <p class="date mb-2">12 Aug 2022</p>
+                            <p class="location"><span id="city">karachi</span>, Pk</p>
+                        </div>
+                        <div class="card-content-footer position-absolute">
+                            <h1 class="temperature">00°C</h1>
+                            <div class="d-flex align-items-center pb-3">
+                                <p class="temperature-text mb-0"></p>
+                                <img src="" class="ms-1 weather-icon" alt="" style="width: 40px;filter: brightness(0) invert(1)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-aside">
+                <div class="aside-wrapper ps-sm-4 px-3">
+                    <div class="pt-3 d-flex justify-content-between align-items-center">
+                        <p class="mb-0 fw-bold text-white fs-5">HUMIDITY</p>
+                        <p class="mb-0 text-white humid_val ">0%</p>
+                    </div>
+                    <hr class="my-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="fw-bold text-white mb-0 fs-5">WIND</p>
+                        <p class="text-white wind_val ">0 km/h</p>
+                    </div>
+                    <hr class="my-1">
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold text-white fs-5">FEELS LIKE</p>
+                        <p class="text-white feel_val ">0 km/h</p>
+                    </div>
+                    <select name="" id="city_select">
+                        <option value="karachi">
+                            <img src="./location.png" alt=""> Karachi
+                        </option>
+                        <option value="islamabad">Islamabad</option>
+                        <option value="rawalpindi">Rawalpindi</option>
+                        <option value="lahore">Lahore</option>
+                        <option value="faisalabad">Faisalabad</option>
+                        <option value="peshawar">Peshawar</option>
+                        <option value="multan">Multan</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/main.js"></script>
+</html>
