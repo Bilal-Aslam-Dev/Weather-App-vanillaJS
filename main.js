@@ -1,14 +1,14 @@
-let today = document.querySelector(".day")
-let date = document.querySelector(".date")
-let loc = document.querySelector(".location")
-let city = document.getElementById("city")
-let temp = document.querySelector(".temperature")
-let tempText = document.querySelector(".temperature-text")
-let windVal = document.querySelector(".wind_val")
-let humidVal = document.querySelector(".humid_val")
-let weatherIcon = document.querySelector(".weather-icon")
-let feelVal = document.querySelector(".feel_val")
-let todayDate = new Date()
+const today = document.querySelector(".day")
+const date = document.querySelector(".date")
+const loc = document.querySelector(".location")
+const city = document.getElementById("city")
+const temp = document.querySelector(".temperature")
+const tempText = document.querySelector(".temperature-text")
+const windVal = document.querySelector(".wind_val")
+const humidVal = document.querySelector(".humid_val")
+const weatherIcon = document.querySelector(".weather-icon")
+const feelVal = document.querySelector(".feel_val")
+const todayDate = new Date()
 
 switch (new Date().getDay()) {
     case 0:
@@ -37,16 +37,14 @@ date.textContent = todayDate.toLocaleDateString()
 today.textContent = day
 
 function getWeatherData() {
-    let select = document.getElementById("city_select")
+    const select = document.getElementById("city_select")
     cityName = select.options[select.selectedIndex].value
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=1b8ab4208b83f3ad1f6261160b704669`)
         .then(res => res.json())
         .then(data => {
     //
-    console.log(data)
-    let celcius
-    celcius = ((data.main.temp - 273.15))
-    let kelToCel = celcius.toFixed(1) + "°C"
+    const celcius = (data.main.temp - 273.15)
+    const kelToCel = celcius.toFixed(1) + "°C"
     temp.textContent = kelToCel
     windVal.textContent = data.wind.speed + "km/h"
     humidVal.textContent = data.main.humidity + "%"
